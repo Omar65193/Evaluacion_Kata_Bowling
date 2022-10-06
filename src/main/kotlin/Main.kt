@@ -51,7 +51,6 @@ fun leerLista():MutableList<Int>{
 }
 
 fun calcularPuntaje(tiradas:MutableList<Int>):Int{
-
     var indice = 0
     var puntaje = 0
     var it = 1
@@ -62,6 +61,7 @@ fun calcularPuntaje(tiradas:MutableList<Int>):Int{
         when {
             t2 == 10 -> {
                 puntaje += 10
+                puntaje += tiradas.get(indice + 2)
                 it++
                 indice += 2
             }
